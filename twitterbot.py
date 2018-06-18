@@ -11,4 +11,11 @@ def tweet_status():
     message = input("Whats's Happening?......tweet here....")
     api.update_status(message)
 
-tweet_status()
+def public_tweet():
+    public_tweets = api.home_timeline()
+    for tweet in public_tweets:
+        print(tweet.text)
+
+
+#tweet_status()
+public_tweet()
